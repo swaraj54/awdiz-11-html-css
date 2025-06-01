@@ -1,0 +1,23 @@
+h2 {
+  color: blue;
+}
+
+.contactStyle {
+  font-weight: bold;
+}
+
+.font-34 {
+  font-size: 34px;
+}
+
+.col-green {
+  color: green;
+}
+
+#border-red {
+  border: 1px solid red;
+}
+
+#border-green {
+  border: 1px solid green;
+}

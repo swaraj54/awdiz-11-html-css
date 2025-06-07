@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 9</title>
+    <style>
+        .blueBox {
+            /* display: inline-block; */
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+        }
+
+        .yellowBox {
+            /* display: inline-block; */
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            /* position: relative; */
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            /* position: sticky;
+            top : 10px */
+        }
+
+        .wrapper {
+            position: relative;
+        }
+
+        .dashed-box {
+            position: relative;
+            z-index: 100;
+            border: dashed;
+            height: 8em;
+            margin-bottom: 1em;
+            margin-top: 2em;
+        }
+
+        .gold-box {
+            position: absolute;
+            z-index: 3;
+            /* put .gold-box above .green-box and .dashed-box */
+            background: gold;
+            width: 80%;
+            left: 60px;
+            top: 3em;
+        }
+
+        .green-box {
+            position: absolute;
+            z-index: 2;
+            /* put .green-box above .dashed-box */
+            background: green;
+            width: 20%;
+            left: 65%;
+            top: -25px;
+            height: 7em;
+            opacity: 0.9;
+        }
+
+        .buttonStyle{
+            cursor: pointer;
+            background-color: aqua;
+            color:  white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 24px;
+            box-sizing: border-box;
+            width: 100px;
+        }
+        .buttonStyle:hover {
+            background-color: blueviolet;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="border: 1px solid black; display: none">
+      Block level element
+    </div>
+    <span style="border: 1px solid red; visibility: hidden"
+      >Inline level element</span
+    >
+    <span style="border: 1px solid red">Inline level element</span>
+    <div style="border: 1px solid black; display: none">
+      Block level element
+    </div>
+    <span style="border: 1px solid red; visibility: hidden"
+      >Inline level element</span
+    >
+    <span style="border: 1px solid red">Inline level element</span>
+    <div style="display: none">Display none</div> -->
+
+    <!-- <div style="height: 1600px">
+      <div style="z-index: 2" class="blueBox">1</div>
+      <div style="z-index: 1" class="yellowBox">2</div>
+      <div style="z-index: 200" class="blueBox">3</div>
+    </div> -->
+    <!-- <div class="wrapper">
+      <div class="dashed-box">Dashed box</div>
+      <div class="gold-box">Gold box</div>
+      <div class="green-box">Green box</div> -->
+
+
+    <!-- <div style="background-image: url('https://purepng.com/public/uploads/large/purepng.com-running-shoesrunning-shoesrunningshoessportingphysical-activitiesstyle-1701528181317yqmsh.png');  background-repeat:repeat-x;  background-repeat:repeat-y; background-repeat: no-repeat; height: 3000px; width: 100%; border: 1px solid red; text-align: center;">
+        <div>
+            <h1>Title</h1>
+            <p>Paragraph</p>
+        </div>
+        <div>
+            <h1>Title</h1>
+            <p>Paragraph</p>
+        </div>
+      </div> -->
+
+    <!-- <div style="background : linear-gradient(to right, #0c4dda, #feb47b)">
+        Testing background gradient
+      </div> -->
+    <!-- <div
+        style="width: 200px;
+         height: 200px; 
+         border: 1px solid red;
+          border-radius: 10px; 
+          border-bottom-right-radius: 30px; 
+          border-bottom-left-radius: 50px; 
+          border-top-left-radius: 20px;
+          border-top-right-radius: 60px;">
+        Testing border radius
+    </div> -->
+    <button class="buttonStyle">Click me</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        margin: 10px;
+        /* padding: 10px; */
+        outline: 1px solid red;
+        outline-offset: 1px;
+        width: 70%;
+        height: 200px;
+        /* margin-left: 25%; */
+        margin: auto;
+        display: flex;
+        /* flex-direction: row;
+        flex-direction: column;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+        /* justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center; */
+        /* justify-content: space-around; */
+        /* justify-content: space-between;
+        justify-content: space-evenly; */
+        /* align-items: center; */
+        align-items: flex-end;
+        align-items: stretch;
+        align-items: flex-start;
+        align-items: center;
+        align-items: baseline;
+      }
+
+      .children {
+        border: 1px solid blue;
+        padding: 0px 24px;
+        /* height: 100px; */
+      }
+      .container > div:first-child,
+      .container > div:last-child,
+      .container > div:nth-child(4) {
+        color: red;
+      }
+      .cnt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid red; */
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="children">1</div>
+      <div class="children">2</div>
+      <div class="children">3</div>
+      <div class="children">4</div>
+    </div> -->
+    <div class="cnt">
+      <div>Text</div>
+    </div>
+  </body>
+</html>

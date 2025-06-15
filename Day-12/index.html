@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pricing {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: stretch;
+      }
+      .card {
+        flex: 1;
+        padding: 30px;
+        background: red;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* min-wdith 600px and more than 600px
+      max-width 600px and less than 600px */
+      @media (min-width: 600px) {
+        .pricing {
+          flex-direction: column;
+        }
+        .card {
+          background-color: green;
+        }
+      }
+      @media (max-width: 600px) {
+        .card {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricing">
+      <div class="card">Basic Basic</div>
+      <div class="card" style="flex-grow: 2">Pro</div>
+      <div class="card">Premium Premium</div>
+    </div>
+  </body>
+</html>

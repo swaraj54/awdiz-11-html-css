@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Edu+QLD+Hand:wght@400..700&family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik+Vinyl&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #screen {
+        border: 4px solid blue;
+        height: 2000px;
+      }
+      /* header css start */
+      #header {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        width: 96%;
+        margin: auto;
+        /* border: 1px solid red; */
+      }
+
+      #logo {
+        width: 10%;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #navigations {
+        width: 35%;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #navigations > p {
+        font-size: 14px;
+      }
+
+      #profile {
+        width: 25%;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #menuIcon {
+        display: none;
+      }
+      #searchSection {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        border-radius: 8px;
+      }
+      #searchIcon {
+        display: none;
+      }
+      #loginSection {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* header css end */
+
+      /* body css start */
+      #bodycnt {
+        width: 92%;
+        margin: auto;
+        border-radius: 20px;
+        /* border: 2px solid red; */
+        background-image: url("./Hero.jpg");
+        height: 640px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      #bodyLeft {
+        width: 45%;
+        padding: 40px;
+        /* border: 2px solid red; */
+      }
+      #bodyRight {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #bodyBottom {
+        display: none;
+        width: 86%;
+        margin: auto;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+      }
+      #addCartButton {
+        background-color: #1570c3;
+        padding: 6px;
+        color: white;
+        font-size: 14px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: none;
+        margin: 4px 0px;
+      }
+
+      #bestsellerCnt {
+        /* border: 2px solid red; */
+        width: 92%;
+        margin: auto;
+      }
+      #bestsellerCntTop {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      #bestsellerCntTop h2 {
+        font-family: "Fredoka", sans-serif;
+        font-size: 28px;
+        font-weight: normal;
+      }
+      .alignCenter {
+        display: flex;
+        align-items: center;
+      }
+      #productsCnt {
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: space-between;
+      }
+      #productsCnt div {
+        width: 24%;
+        /* border: 1px solid black; */
+      }
+      #productCard img {
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+      }
+      #productCard h4 {
+        padding: 4px 0px;
+        font-weight: normal;
+      }
+
+      #productCard h4:first-child {
+        margin-top: 10px;
+      }
+
+      @media (min-width: 320px) and (max-width: 750px) {
+        #menuIcon {
+          display: block;
+        }
+        #navigations {
+          display: none;
+        }
+        #searchSection {
+          display: none;
+        }
+        #loginSection {
+          display: none;
+        }
+
+        #logo {
+          width: 32%;
+          justify-content: flex-start;
+          padding-left: 10px;
+        }
+
+        #searchIcon {
+          display: block;
+        }
+
+        #profile {
+          width: 45%;
+        }
+        #bodyRight {
+          display: none;
+        }
+
+        #bodyBottom {
+          display: block;
+          margin-bottom: 20px;
+        }
+        #bodycnt {
+          border-radius: 10px;
+        }
+        #subHeading {
+          font-size: 16px;
+        }
+
+        #bodyLeft {
+          width: 65%;
+        }
+        #addCartButton {
+          width: 100%;
+          background-color: #1570c3;
+          padding: 10px;
+          color: white;
+          font-size: 14px;
+          border-radius: 6px;
+          font-weight: bold;
+          border: none;
+          margin: 4px 0px;
+        }
+
+        #productsCnt {
+          flex-wrap: wrap;
+        }
+
+        #productsCnt > div {
+          width: 48%;
+        }
+
+        #productCard img {
+          height: 180px;
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen">
+      <div id="header">
+        <div id="logo">
+          <h1>Awdiz</h1>
+        </div>
+        <div id="navigations">
+          <p>Shop All</p>
+          <p>Best Sellers</p>
+          <p>Active QX</p>
+          <p>Artisanal</p>
+          <p>Kids</p>
+          <p>About Us</p>
+        </div>
+        <div id="profile">
+          <div id="searchSection">
+            <img src="./search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+            <input
+              style="border: none; outline: none; width: 80px"
+              placeholder="Search"
+            />
+          </div>
+          <div id="loginSection">
+            <p>Log In</p>
+            <img
+              src="./account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+            />
+          </div>
+          <div id="searchIcon">
+            <img src="./search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+          </div>
+          <div>
+            <img src=".//favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+          </div>
+          <div>
+            <img
+              src="./shopping_bag_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+            />
+          </div>
+          <div id="menuIcon">
+            <img src="./menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+          </div>
+        </div>
+      </div>
+      <div id="body">
+        <div id="bodycnt">
+          <div id="bodyLeft">
+            <h1 style="font-size: 54px; text-transform: uppercase">
+              Walkking With Purpose.
+            </h1>
+            <h1 id="subHeading">Premium Vegan Sneakers</h1>
+          </div>
+          <div id="bodyRight">
+            <div
+              style="
+                width: 70%;
+                height: 400px;
+                background-color: white;
+                border-radius: 20px;
+                padding: 20px;
+              "
+            >
+              <img
+                style="height: 80%; width: 100%; border-radius: 20px"
+                src="https://static.wixstatic.com/media/c837a6_f4b16c06d8b5449c954a72eb34be2b4b~mv2.jpg/v1/fill/w_504,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_f4b16c06d8b5449c954a72eb34be2b4b~mv2.jpg"
+              />
+              <h3 style="margin-top: 4px">Bio Runner</h3>
+              <h3>
+                <span style="text-decoration: line-through">$119</span> $99
+              </h3>
+              <button
+                style="
+                  background-color: #1570c3;
+                  padding: 6px;
+                  color: white;
+                  font-size: 14px;
+                  border-radius: 6px;
+                  font-weight: bold;
+                  border: none;
+                  margin: 4px 0px;
+                "
+              >
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="bodyBottom">
+          <div
+            style="
+              width: 90%;
+              margin: auto;
+              height: 400px;
+              background-color: #f0f0f0;
+              border-radius: 20px;
+              padding: 40px 14px;
+            "
+          >
+            <img
+              style="height: 80%; width: 100%; border-radius: 20px"
+              src="https://static.wixstatic.com/media/c837a6_f4b16c06d8b5449c954a72eb34be2b4b~mv2.jpg/v1/fill/w_504,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_f4b16c06d8b5449c954a72eb34be2b4b~mv2.jpg"
+            />
+            <h3 style="margin-top: 4px">Bio Runner</h3>
+            <h3><span style="text-decoration: line-through">$119</span> $99</h3>
+            <button id="addCartButton">ADD TO CART</button>
+          </div>
+        </div>
+        <div id="bestsellerCnt">
+          <div id="bestsellerCntTop">
+            <div>
+              <h2>OUR BEST SELLERS</h2>
+            </div>
+            <div class="alignCenter">
+              <h4>View All</h4>
+            </div>
+          </div>
+          <div id="productsCnt">
+            <div id="productCard">
+              <img
+                src="https://static.wixstatic.com/media/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg/v1/fill/w_423,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg"
+              />
+              <h4>Active Jr</h4>
+              <h4>
+                <span style="text-decoration: line-through">$119</span> $99
+              </h4>
+            </div>
+            <div id="productCard">
+              <img
+                src="https://static.wixstatic.com/media/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg/v1/fill/w_423,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg"
+              />
+              <h4>Active Jr</h4>
+              <h4>
+                <span style="text-decoration: line-through">$119</span> $99
+              </h4>
+            </div>
+            <div id="productCard">
+              <img
+                src="https://static.wixstatic.com/media/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg/v1/fill/w_423,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg"
+              />
+              <h4>Active Jr</h4>
+              <h4>
+                <span style="text-decoration: line-through">$119</span> $99
+              </h4>
+            </div>
+            <div id="productCard">
+              <img
+                src="https://static.wixstatic.com/media/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg/v1/fill/w_423,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg"
+              />
+              <h4>Active Jr</h4>
+              <h4>
+                <span style="text-decoration: line-through">$119</span> $99
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">Footer</div>
+    </div>
+  </body>
+</html>

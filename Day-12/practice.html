@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cnt {
+        display: flex;
+        justify-content: space-around;
+      }
+      .child {
+        width: 19%;
+        border: 1px solid red;
+        background-color: blue;
+      }
+      /* mobile less 550px */
+      @media (max-width: 550px) {
+        .cnt {
+          flex-wrap: wrap;
+        }
+        .child {
+          background-color: red;
+          width: 45%;
+          margin: 10px 0px;
+          padding: 10px;
+        }
+        .cnt > div:nth-child(1) {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+      /* tablet 551px 800px */
+      @media (min-width: 551px) and (max-width: 800px) {
+        .cnt {
+          flex-wrap: wrap;
+        }
+        .child {
+          width: 32%;
+          background-color: green;
+        }
+        .cnt > div:first-child {
+          display: flex;
+        }
+      }
+      /* laptop 801px 1600px */
+      @media (min-width: 801px) and (max-width: 1600px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cnt">
+      <div class="child">
+        <div class="grandChild">1.1</div>
+        <div class="grandChild">1.2</div>
+        <div class="grandChild">1.3</div>
+        <div class="grandChild">1.4</div>
+      </div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+  </body>
+</html>

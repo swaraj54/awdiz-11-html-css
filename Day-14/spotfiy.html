@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+      }
+      #screen {
+        border: 10px solid blue;
+        height: 100vh;
+      }
+      #header {
+        height: 70px;
+        border: 5px solid red;
+        display: flex;
+        justify-content: space-between;
+      }
+      #headerLeft {
+        width: 38%;
+        border: 3px solid yellow;
+        display: flex;
+        justify-content: space-between;
+      }
+      #headerIcon {
+        width: 10%;
+        border: 2px solid blue;
+      }
+      #headerSearch {
+        width: 80%;
+        border: 2px solid blue;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      #headerRight {
+        width: 38%;
+        border: 3px solid yellow;
+        display: flex;
+        justify-content: space-between;
+      }
+      #headerPrem {
+        width: 35%;
+        border: 3px solid blue;
+      }
+      #headerInst {
+        width: 15%;
+        border: 3px solid blue;
+      }
+      #headerAuth {
+        width: 30%;
+        border: 3px solid blue;
+      }
+
+      #body {
+        border: 5px solid green;
+        height: 90vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen">
+      <div id="header">
+        <div id="headerLeft">
+          <div id="headerIcon">
+            <img style="height: 100%; width: 100%; background-color: red;" src="./spotify_icon.jpg" />
+          </div>
+          <div id="headerSearch">
+            <div id="headerHome">hOME</div>
+            <div id="headerSearchCnt">Search</div>
+          </div>
+        </div>
+        <div id="headerRight">
+            <div id="headerPrem">1</div>
+            <div id="headerInst">2</div>
+            <div id="headerAuth">3</div>
+        </div>
+      </div>
+      <div id="body">Body</div>
+    </div>
+  </body>
+</html>
